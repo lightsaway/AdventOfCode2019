@@ -1,6 +1,6 @@
 import cats.effect.{ExitCode, IO, IOApp}
 import cats.implicits._
-import fs2.{text, Stream}
+import fs2.{Pure, Stream, text}
 
 object Day2 extends IOApp {
   type Program = List[Int]
@@ -31,6 +31,7 @@ object Day2 extends IOApp {
           {
             val memory = p.updated(1, noun).updated(2, verb)
             val out    = runProgram(0, memory)
+            println(noun, verb, out)
             (noun, verb, out)
           }
         }
@@ -41,6 +42,7 @@ object Day2 extends IOApp {
       .compile
       .toList
       .head
+
 
   def toProgram(s: String): Program = s.split(",").toList.map(_.toInt)
 

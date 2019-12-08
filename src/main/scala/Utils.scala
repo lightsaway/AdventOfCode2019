@@ -12,6 +12,6 @@ object Utils {
     readFile(f).through(text.utf8Decode)
 
   def readLines[F[_]](f: String)(implicit CS: ContextShift[F], S: Sync[F]): Stream[F, String] =
-    readFile(f).through(text.utf8Decode).through(text.lines)
+    readStrings(f).through(text.lines)
 
 }
