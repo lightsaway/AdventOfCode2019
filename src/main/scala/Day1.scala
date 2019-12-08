@@ -1,5 +1,4 @@
 import cats.effect.{ExitCode, IO, IOApp}
-import fs2.text
 import cats.implicits._
 
 object Day1 extends IOApp {

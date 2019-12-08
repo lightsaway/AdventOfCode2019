@@ -1,6 +1,5 @@
 import cats.effect.{ExitCode, IO, IOApp}
 import cats.implicits._
-import fs2.{Pure, Stream, text}
 
 object Day2 extends IOApp {
   type Program = List[Int]
@@ -38,7 +37,7 @@ object Day2 extends IOApp {
       }
       .dropWhile { case (_, _, o) => o != 19690720 }
       .take(1)
-      .map { case (n, v, o) => 100 * n + v }
+      .map { case (n, v, _) => 100 * n + v }
       .compile
       .toList
       .head

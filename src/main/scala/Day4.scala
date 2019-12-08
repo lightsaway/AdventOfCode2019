@@ -1,6 +1,7 @@
+import scala.util.chaining._
+
 import cats.effect.{ExitCode, IO, IOApp}
 import cats.implicits._
-import scala.util.chaining._
 
 object Day4 extends IOApp {
 

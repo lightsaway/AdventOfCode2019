@@ -1,5 +1,5 @@
-import cats.effect.{ExitCode, IO, IOApp}
 import Utils._
+import cats.effect.{ExitCode, IO, IOApp}
 import cats.implicits._
 
 object Day3 extends IOApp {
