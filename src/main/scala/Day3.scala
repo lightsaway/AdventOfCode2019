@@ -42,6 +42,7 @@ object Day3 extends IOApp {
         w1.takeWhile(p => p != i).size + w2.takeWhile(p => p != i).size
       }
     }.min
+
     Distance(minDistance, minSteps)
   }
 
